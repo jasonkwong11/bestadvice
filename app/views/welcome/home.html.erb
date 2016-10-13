@@ -1,4 +1,16 @@
-<h1> Welcome to Best Advice </h1>
-<h2> because everyone has a lifetime of best advice to share</h2>
+
+<h2> ... because everyone has a lifetime of best advice to share</h2>
 
 <a href="/posts">Link to Posts Index</a>
+
+<% content_for :top_content do %>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Welcome!</h1>
+      <p>Register to get started.</p>
+      <p>
+        <%= link_to 'Register', new_user_registration_path, class: 'btn btn-primary btn-lg' %>
+      </p>
+    </div>
+  </div>
+<% end %>
