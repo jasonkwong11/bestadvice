@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+
+gem 'omniauth-twitter'
+
 gem 'devise_zxcvbn'
 
 gem 'jquery-turbolinks'
