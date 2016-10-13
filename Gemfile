@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'devise_zxcvbn'
+
 gem 'jquery-turbolinks'
 gem 'devise'
 gem 'bootstrap-sass'

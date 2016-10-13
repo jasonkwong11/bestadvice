@@ -1,0 +1,37 @@
+I"«(function() {
+  jQuery(function() {
+    var displayHint;
+    displayHint = function(strength, crack_time) {
+      var estimate_message, msg;
+      msg = 'Password is ' + strength + ' (time to break it: ' + crack_time + ')';
+      estimate_message = this.next('.estimate-message');
+      if (estimate_message.length > 0) {
+        return estimate_message.text(msg);
+      } else {
+        return this.after('<span class="help-block estimate-message">' + msg + '</span>');
+      }
+    };
+    return $('form').on('keyup', '.estimate-password', function() {
+      var $this, crack_time, estimation;
+      $this = $(this);
+      estimation = zxcvbn($this.val());
+      crack_time = estimation.crack_time_display;
+      switch (estimation.score) {
+        case 0:
+          return displayHint.call($this, "very weak", crack_time);
+        case 1:
+          return displayHint.call($this, "weak", crack_time);
+        case 2:
+          return displayHint.call($this, "okay", crack_time);
+        case 3:
+          return displayHint.call($this, "strong", crack_time);
+        case 4:
+          return displayHint.call($this, "very strong", crack_time);
+      }
+    });
+  });
+
+  return;
+
+}).call(this);
+:ET
