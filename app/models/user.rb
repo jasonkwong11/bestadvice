@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :zxcvbnable
   has_many :posts
   has_many :comments, through: :posts
+  has_many :tags, through: :posts
 end

@@ -16,9 +16,9 @@
         </div>
         <div id="navbar">
           <ul class="nav navbar-nav">
-            <li><%= link_to 'Browse Advice', posts_path %></li>
+            <li><%= link_to 'Browse', posts_path %></li>
             <% if user_signed_in? %>
-              <li><%= link_to 'Secret', secret_path %></li>
+              <li><%= link_to 'Share Advice', new_post_path %></li>
             <% end %>
           </ul>
           <ul class="nav navbar-nav pull-right">
