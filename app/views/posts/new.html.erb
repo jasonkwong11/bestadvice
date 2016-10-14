@@ -1,13 +1,14 @@
-<% header "New Post!" %>
+<% header "Share Advice" %>
 
-<%= form_for(@post) do |post_builder| %>
-<%= post_builder.label :title, "Title" %><br>
-<%= post_builder.text_field :title%>
+<%= form_for(@post, url: posts_path) do |f| %>
+
+<%= f.label :title %><br>
+<%= f.text_field :title%>
 
 <br><br>
-<%= post_builder.label :content, "What's the best advice you've ever received?" %><br>
-<%= post_builder.text_area :content, :cols => "90", :rows => "10"%>
+<%= f.label :content, "What's the best advice you've ever received?" %><br>
+<%= f.text_area :content, :cols => "90", :rows => "10"%>
 <br><br>
 
-<%= post_builder.submit %>
+<%= f.submit %>
 <% end %>

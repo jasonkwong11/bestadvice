@@ -1,2 +1,7 @@
 <h1> This is the index page for Posts </h1>
 <h4>Eventually this will display a preview of all the posts and link to each post's show page</h4>
+
+<% @posts.each do |post| %>
+  <%= post.title %>
+  <%= post.content %>
+<% end %>
