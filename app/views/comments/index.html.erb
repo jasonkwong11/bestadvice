@@ -1,0 +1,6 @@
+<% header 'Comments' %>
+<h4>from the masses...</h4>
+<br>
+<% @comments.each do |comment| %>
+  ..."<%= comment.content %>"<br>
+<% end %>

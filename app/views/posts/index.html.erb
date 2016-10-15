@@ -1,7 +1,10 @@
-<h1> This is the index page for Posts </h1>
-<h4>Eventually this will display a preview of all the posts and link to each post's show page</h4>
 
-<% @posts.each do |post| %>
-  <%= post.title %>
-  <%= post.content %>
-<% end %>
+<% header 'Browse Advice' %>
+<h4> lifetimes of advice at your fingertips ...</h4>
+
+<fieldset>
+  <% @posts.each do |post| %>
+    <legend><%= link_to post.title, post_path(post) %><br></legend>
+    <%= post.content[0..75] %><%= link_to "...read more", post_path(post) %><br><br>
+  <% end %>
+</fieldset>

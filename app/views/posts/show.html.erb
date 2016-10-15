@@ -1,3 +1,23 @@
-<h1> THIS IS THE SHOW PAGE FOR A POST </h1>
-<%= @post.title %>
+
+<% header @post.title %>
 <%= @post.content %>
+<br>
+
+<br>
+<br>
+
+<%= form_for(Comment.new, url: post_comments_path(@post)) do |f| %>
+  <%= f.hidden_field :post_id, value: @post.id %>
+  <%= f.label 'Say something nice: '%><br>
+  <%= f.text_area :content %><br>
+  <%= f.submit %>
+<% end %>
+
+<br>
+<strong>
+<br>
+or maybe just...
+<br>
+</strong>
+<br><br>
+<%= button_to "View Comments", post_comments_path(@post), :method => :get %>
