@@ -6,7 +6,7 @@
 <br>
 <br>
 
-<%= form_for(Comment.new, url: post_comments_path(@post)) do |f| %>
+<%= form_for(@comment, url: post_comments_path(@post)) do |f| %>
   <%= f.hidden_field :post_id, value: @post.id %>
   <%= f.label 'Say something nice: '%><br>
   <%= f.text_area :content %><br>
@@ -15,9 +15,8 @@
 
 <br>
 <strong>
-<br>
 or maybe just...
 <br>
 </strong>
-<br><br>
+<br>
 <%= button_to "View Comments", post_comments_path(@post), :method => :get %>

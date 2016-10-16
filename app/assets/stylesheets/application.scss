@@ -17,6 +17,14 @@
 @import "bootstrap";
 @import 'bootstrap/theme';
 
+html body #bgimage {
+    background: url('bike.jpeg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
+
+
 .alert-alert {
   @extend .alert-warning;
 }
