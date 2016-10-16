@@ -1,24 +1,20 @@
-# README
+# Best Advice
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Project Summary
 
-Things you may want to cover:
+Best Advice is a CRUD blogging platform that shares the collective best life advice of it's users. It's built in Rails. 
 
-* Ruby version
+## Installation
 
-* System dependencies
+To run this simply clone or fork it, run `bundle install`, `rake db:migrate` and then `rails s`.
 
-* Configuration
 
-* Database creation
+## Future Plans
 
-* Database initialization
+I plan to additional functionality to this app including: voting system to upvote/downvote blog posts, post tags using nested forms, and a top contributor feature that highlights the user with the most blog posts.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Todos
+- [ ] Voting system
+- [ ] Post tags
+- [ ] Top Contributor Feature
