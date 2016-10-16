@@ -18,7 +18,7 @@
 @import 'bootstrap/theme';
 
 html body #bgimage {
-    background: url('bike.jpeg');
+    background: image-url('bike.jpeg');
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center center; 
