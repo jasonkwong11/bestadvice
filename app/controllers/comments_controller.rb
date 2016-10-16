@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
  
   before_filter :determine_scope
+  before_action :determine_post
 
   def index
     @comments = @scope.all
@@ -17,7 +18,8 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to post_comments_path
     else
-      render :roote
+      flash[:notice] = "Please enter a valid comment."
+      redirect_to post_path(@post)
     end
   end
 
@@ -27,6 +29,12 @@ protected
       Post.find(params[:post_id]).comments
     else
       Comment
+    end
+  end
+
+  def determine_post
+    @post = if params[:post_id]
+      Post.find(params[:post_id])
     end
   end
 

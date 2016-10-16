@@ -15,7 +15,8 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post
     else
-      redirect_to :root
+      flash[:notice] = "Please enter a valid post."
+      redirect_to new_post_path
     end
   end
 
