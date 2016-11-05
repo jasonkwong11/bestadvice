@@ -1,10 +1,11 @@
 
 <% header 'Browse Advice' %>
 <h4> lifetimes of advice at your fingertips ...</h4>
-
+<br>
 <fieldset>
   <% @posts.each do |post| %>
     <legend><%= link_to post.title, post_path(post) %><br></legend>
     <%= post.content[0..75] %><%= link_to "...read more", post_path(post) %><br><br>
+    Votes: <%= post.votes%>
   <% end %>
 </fieldset>
