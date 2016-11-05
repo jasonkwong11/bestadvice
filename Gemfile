@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'local_time'
 gem 'devise_zxcvbn'
 
 gem 'jquery-turbolinks'

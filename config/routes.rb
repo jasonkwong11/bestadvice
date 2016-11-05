@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  post '/posts/upvote', to: 'posts#upvote'
+
  # get '/posts/new', to: 'posts#new', as: :new
 end

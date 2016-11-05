@@ -2,6 +2,8 @@
     <div class="notice"><%= flash[:notice] %></div>
   <% end %>
 <% header @post.title %>
+<h4>Written at: <%= local_time(@post.created_at) %></h4>
+
 <%= @post.content %>
 <br>
 

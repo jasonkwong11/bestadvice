@@ -25,6 +25,13 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def upvote
+    @post = Post.find(params[:post_id])
+    @post.votes += 1
+    redirect_to :back
+    raise
+  end
+
 end
 
 
