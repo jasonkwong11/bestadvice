@@ -23,6 +23,7 @@ class PostsController < ApplicationController
   def show
     @comment = Comment.new
     @post = Post.find(params[:id])
+    @user = User.find(@post.user_id)
   end
 
   def upvote
