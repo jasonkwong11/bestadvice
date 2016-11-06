@@ -15,6 +15,6 @@ I plan to additional functionality to this app including: voting system to upvot
 
 
 ## Todos
-- [ ] Voting system
+- [X] Voting system... works fine in development, buggy on heroku
 - [ ] Post tags
 - [ ] Top Contributor Feature
