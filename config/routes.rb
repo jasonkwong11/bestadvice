@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
 
   post '/posts/upvote', to: 'posts#upvote'
+  post '/posts/downvote', to: 'posts#downvote'
 
  # get '/posts/new', to: 'posts#new', as: :new
 end
