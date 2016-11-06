@@ -3,13 +3,15 @@
 <h4> lifetimes of advice at your fingertips ...</h4>
 <br>
 <fieldset>
-  <% @posts.each do |post| %>
+
+
+  <% @posts.sort_by {|post| post.votes}.reverse.each do |post| %>
     <legend><%= link_to post.title, post_path(post) %><br></legend>
     <%= post.content[0..75] %><%= link_to "...read more", post_path(post) %><br><br>
     
       <%= button_to "Upvote", { action: "upvote", post_id: post.id }, method: :post %>
 
     Votes: <%= post.votes%>
-   
+
     <% end %>
 </fieldset>

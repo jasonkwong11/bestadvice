@@ -29,8 +29,8 @@ class PostsController < ApplicationController
   def upvote
     @post = Post.find(params[:post_id])
     @post.votes += 1
+    @post.save
     redirect_to :back
-    raise
   end
 
 end
