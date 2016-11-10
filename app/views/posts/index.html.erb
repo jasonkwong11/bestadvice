@@ -9,8 +9,7 @@
     <legend><%= link_to post.title, post_path(post) %><br></legend>
     <%= post.content[0..75] %><%= link_to "...read more", post_path(post) %><br><br>
     
-
-    <strong>Votes: <%= post.votes%></strong>
+<strong>Votes: <%= post.votes%></strong>
       <%= button_to "Upvote", { action: "upvote", post_id: post.id }, method: :post %>
       <%= button_to "Downvote", { action: "downvote", post_id: post.id }, method: :post %>
       <br>
