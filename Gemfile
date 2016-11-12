@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rspec-rails'
+gem 'factory_girl_rails'
 gem 'pry-rails', :group => :development
 gem 'pry'
 
