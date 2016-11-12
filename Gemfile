@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'pry-rails', :group => :development
+gem 'pry'
+
 gem 'local_time'
 gem 'devise_zxcvbn'
 

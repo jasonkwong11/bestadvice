@@ -7,4 +7,14 @@ class User < ApplicationRecord
   has_many :comments, through: :posts
   has_many :tags, through: :posts
   
+
+  def self.top_contributor_email
+    user = User.all.max_by{|user| user.posts.count}
+    user.email
+  end
+
+  def self.top_contributor_post_count
+    user = User.all.max_by{|user| user.posts.count}
+    user.posts.count
+  end
 end

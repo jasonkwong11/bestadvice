@@ -2,9 +2,10 @@
 <% header 'Browse Advice' %>
 <h4> lifetimes of advice at your fingertips ...</h4>
 <br>
+<strong>Top Contributor: <%= User.top_contributor_email %> has contributed <%= User.top_contributor_post_count%> posts! </strong>
+<br>
+<br>
 <fieldset>
-
-
   <% @posts.sort_by {|post| post.votes}.reverse.each do |post| %>
     <legend><%= link_to post.title, post_path(post) %><br></legend>
     <%= post.content[0..75] %><%= link_to "...read more", post_path(post) %><br><br>
